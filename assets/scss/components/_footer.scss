@@ -1,0 +1,78 @@
+.footer {
+    background-color: $darkBlack;
+    &-contents {
+        position: relative;
+        @include vw-pc(width, 1360);
+        margin: 0 auto;
+
+        &--top {
+            @include vw-pc(padding-top, 59);
+            @include vw-pc(padding-bottom, 63);
+        }
+
+        &--bottom {
+            position: relative;
+            @include vw-pc(padding-top, 53);
+            @include vw-pc(padding-bottom, 56);
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                display: block;
+                @include vw-pc(width, 1280);
+                @include vw-pc(height, 1);
+                background-color: $gray555;
+                content: '';
+                transform: translateX(-50%);
+            }
+        }
+
+
+        &__title {
+            @include vw-font-size-pc(46);
+            font-weight: 500;
+            color: $white;
+        }
+
+        &__desc {
+            @include vw-pc(margin-top, 6);
+            @include vw-pc(line-height, 28);
+            @include vw-font-size-pc(20);
+            color: $white;
+        }
+
+        &__btn {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &__logo {
+            @include vw-pc(width, 176);
+        }
+
+        &__address {
+            @include vw-pc(margin-top, 27);
+            @include vw-font-size-pc(16);
+            color: $white;
+        }
+
+        &__email {
+            @include vw-pc(margin-top, 8);
+            @include vw-font-size-pc(16);
+            font-family: $roboto;
+            color: $white;
+        }
+
+        &__copy {
+            position: absolute;
+            @include vw-pc(bottom, 56);
+            right: 0;
+            @include vw-font-size-pc(20);
+            font-family: $roboto;
+            color: $white;
+        }
+    }
+}

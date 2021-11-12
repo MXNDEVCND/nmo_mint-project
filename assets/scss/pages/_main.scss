@@ -1,0 +1,294 @@
+.main {
+    @include vw-pc(padding, 100 0);
+    box-sizing: border-box;
+    text-align: center;
+
+    &-title {
+        @include vw-font-size-pc(62);
+        font-weight: bold;
+        @include vw-pc(line-height, 80);
+    }
+
+    &-desc {
+        @include vw-pc(margin-top, 12);
+        @include vw-pc(line-height, 32);
+        @include vw-font-size-pc(20);
+    }
+
+    &-btn {
+        @include vw-pc(margin-top, 30);
+    }
+}
+
+.content {
+    &--white {
+        @include vw-pc(padding-top, 47);
+        background-color: $white;
+        &-bottom {
+            @include vw-pc(padding-top, 240);
+            @include vw-pc(padding-bottom, 50);
+            background-color: $white;
+        }
+    }
+
+    &--navy {
+        position: relative;
+        @include vw-pc(padding-top, 80);
+        @include vw-pc(padding-bottom, 736);
+        background-color: $navy;
+    }
+
+
+
+    &-inner {
+        @include vw-pc(width, 1360);
+        margin: 0 auto;
+
+        &--client {
+            position: relative;
+            @include vw-pc(padding-top, 82);
+        }
+
+        &--contact {
+            @include vw-pc(margin-top, 40);
+        }
+    }
+
+    &-title {
+        @include vw-font-size-pc(46);
+        @include vw-pc(line-height, 58);
+        font-weight: 500;
+
+        &--white {
+            color: $white;
+        }
+
+        &--center {
+            text-align: center;
+        }
+    }
+
+    &-desc {
+        @include vw-pc(margin-top, 12);
+        @include vw-font-size-pc(18);
+        @include vw-pc(line-height, 30);
+
+        &--white {
+            color: $white;
+        }
+    }
+
+    &-portfolio {
+        &__tab {
+            &-content {
+                position: absolute;
+                @include vw-pc(top, 394);
+                right: 0;
+                @include vw-pc(width, 1148);
+            }
+        }
+    }
+
+    &-slide {
+        position: absolute;
+        width: 100%;
+        @include vw-pc(margin-top, 236);
+        @include vw-pc(margin-left, -20);
+        @include vw-pc(padding-right, 20);
+        white-space: nowrap;
+        overflow: hidden;
+
+        &__inner {
+            position: relative;
+        }
+
+        &__item {
+            position: relative;
+            display: inline-block;
+            @include vw-pc(width, 480);
+            @include vw-pc(height, 608);
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &+& {
+                @include vw-pc(margin-left, 20);
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.035);
+                    transition: all .4s;
+                }
+                &:after {
+                    position: absolute;
+                    @include vw-pc(top, 10);
+                    @include vw-pc(left, 12);
+                    @include vw-pc(width, 435);
+                    @include vw-pc(height, 568);
+                    display: inline-block;
+                    box-shadow: rgb(112 112 112 / 30%) 0px 0px 0px 1rem inset;
+                    content: '';
+                    box-sizing: border-box;
+                    z-index: 1;
+
+
+                }
+            }
+        }
+
+        .slick {
+            &-arrow {
+                position: absolute;
+                @include vw-pc(top, 244);
+                display: inline-block;
+                @include vw-pc(width, 72);
+                @include vw-pc(height, 72);
+                font-size: 0;
+                border: none;
+                background-color: none;
+                z-index: 1;
+                cursor: pointer;
+            }
+
+            &-prev {
+                @include vw-pc(left, 310);
+                background: url('#{$img-path}/icon/icon_slide_prev.svg') center/contain no-repeat;
+            }
+
+            &-next {
+                @include vw-pc(right, 280);
+                background: url('#{$img-path}/icon/icon_slide_next.svg') center/contain no-repeat;
+            }
+        }
+    }
+
+    &-contact {
+        &__banner {
+            display: inline-block;
+            @include vw-pc(width, 739);
+            vertical-align: top;
+        }
+
+        &__desc {
+            display: inline-block;
+            @include vw-pc(margin-left, 50);
+            @include vw-pc(margin-top, 75);
+            vertical-align: top;
+
+            &-item {
+                position: relative;
+                @include vw-pc(padding-left, 14);
+                @include vw-font-size-pc(20);
+                @include vw-pc(line-hegiht, 28);
+
+                &+& {
+                    @include vw-pc(margin-top, 15);
+                }
+
+                &:before {
+                    position: absolute;
+                    @include vw-pc(top, 11);
+                    left: 0;
+                    display: inline-block;
+                    @include vw-pc(width, 4);
+                    @include vw-pc(height, 4);
+                    border-radius: 50%;
+                    background-color: $black;
+                    content: '';
+                }
+            }
+        }
+    }
+
+}
+.client {
+    &-banner {
+        &-slide {
+            width: 100%;
+            overflow: hidden;
+
+            &+& {
+                @include vw-pc(margin-top, 27);
+            }
+
+            &--left {
+                .client-banner-slide__inner {
+                    animation: bannermoveleft 80s linear infinite alternate-reverse;
+                }
+            }
+            &--right {
+                .client-banner-slide__inner {
+                    animation: bannermoveright 80s linear infinite alternate-reverse;
+                }
+            }
+
+            &__inner {
+                position: relative;
+                display: flex;
+                width: 100%;
+                @include vw-pc(height, 63);
+            }
+        }
+    }
+    &-img{
+        &__list {
+            position: relative;
+            @include vw-pc(margin-top, 38);
+            font-size: 0;
+
+            &+& {
+                margin-top: 0;
+            }
+        }
+        &__item {
+            display: inline-block;
+            vertical-align: top;
+            &--turn01 {
+                position: absolute;
+                @include vw-pc(top, -309);
+                @include vw-pc(right, -32);
+                @include vw-pc(width, 420);
+            }
+
+            &--turn02 {
+                @include vw-pc(width, 424);
+                @include vw-pc(margin-left, -17);
+                @include vw-pc(padding-top, 40);
+            }
+            &--turn03 {
+                @include vw-pc(margin-left, -75);
+                @include vw-pc(width, 688);
+                z-index: 1;
+            }
+            &--turn04 {
+                @include vw-pc(width, 420);
+                @include vw-pc(margin-top, -120);
+                @include vw-pc(margin-left, -17);
+            }
+            &--turn05 {
+                position: absolute;
+                @include vw-pc(width, 957);
+                @include vw-pc(bottom, 0);
+                @include vw-pc(right, 0);
+            }
+        }
+    }
+}
+
+@keyframes bannermoveleft {
+    from {
+        left: 0px;
+    }
+    to {
+        @include vw-pc(left, -3000);
+    }
+}
+
+@keyframes bannermoveright {
+    from {
+        @include vw-pc(left, -3000);
+    }
+    to {
+        left: 0px;
+    }
+}

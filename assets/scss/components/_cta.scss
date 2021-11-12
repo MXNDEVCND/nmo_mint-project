@@ -1,0 +1,44 @@
+.cta  {
+    display: inline-block;
+
+    &--mini {
+        line-height: normal;
+        @include vw-pc(padding, 7 40 8);
+        box-sizing: border-box;
+        @include vw-font-size-pc(18);
+        font-weight: 500;
+        @include vw-pc(border-radius, 4);
+    }
+
+    &--xsmall {
+        line-height: normal;
+        @include vw-pc(padding, 10 67 11);
+        box-sizing: border-box;
+        @include vw-font-size-pc(18);
+        font-weight: 500;
+        @include vw-pc(border-radius, 4);
+    }
+
+    &--small {
+        @include vw-pc(padding, 10 52 11);
+        box-sizing: border-box;
+        @include vw-font-size-pc(20);
+        font-weight: 500;
+        @include vw-pc(border-radius, 4);
+    }
+
+    &--black {
+        background-color: $black;
+        color: $white;
+    }
+
+    &--white {
+        background-color: $white;
+        color: $black;
+    }
+
+    &--blue {
+        background-color: $blue;
+        color: $white;
+    }
+}

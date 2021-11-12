@@ -1,0 +1,66 @@
+.vertical-tab {
+    &__menu {
+        @include vw-pc(max-width, 370);
+        @include vw-pc(margin-top, 164);
+        &-item {
+            display: inline-block;
+            color: $white;
+            @include vw-font-size-pc(46);
+            font-weight: bold;
+            cursor: pointer;
+            opacity: .3;
+
+            &:after {
+                display: inline-block;
+                width: 0;
+                @include vw-pc(height, 2);
+                position: absolute;
+                @include vw-pc(bottom, -2);
+                left: 0;
+                content: '';
+                background: $white;
+            }
+
+            &+& {
+                @include vw-pc(margin-top, 30);
+            }
+
+            &--active {
+                position: relative;
+                @include vw-pc(padding-right, 38);
+                background: url('#{$img-path}/icon/icon_arrow_right.svg') top 67% right/contain no-repeat;
+                @include vw-pc(background-size, 30 27);
+                opacity: 1;
+
+                &:after {
+                    width: 100%;
+                    transition: width .3s;
+                }
+            }
+        }
+    }
+
+    &__content {
+        @include vw-pc(width, 1148);
+        @include vw-pc(height, 669);
+        overflow: hidden;
+        &-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            opacity: 0;
+            transform: translateX(10px);
+
+            img {
+                width: 100%;
+            }
+
+            &--active {
+                transform: translateX(0);
+                opacity: 1;
+                transition: all .3s  cubic-bezier(.694,0,.335,1);
+            }
+        }
+    }
+}

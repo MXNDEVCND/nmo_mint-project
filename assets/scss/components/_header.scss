@@ -1,0 +1,31 @@
+.header {
+    width: 100%;
+    box-shadow: 0px 1px 10px rgba(122,122,122,0.1);
+    &-inner {
+        @include vw-pc(width, 1360);
+        margin: 0 auto;
+        @include vw-pc(padding, 24 0);
+    }
+
+    &-logo {
+        display: inline-block;
+        @include vw-pc(width, 131);
+        vertical-align: top;
+    }
+
+    &-menu {
+        float: right;
+        &__item {
+            display: inline-block;
+            &+& {
+                @include vw-pc(margin-left, 60);
+
+            }
+        }
+
+        &__anchor {
+            @include vw-font-size-pc(18);
+            font-family: $roboto;
+        }
+    }
+}
