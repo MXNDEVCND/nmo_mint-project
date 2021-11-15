@@ -1,15 +1,17 @@
 $(document).ready(function(){
 
     //portfolio contents slide
-    $('.content-slide').slick({
+    $('.content-slide__inner').slick({
         dots: false,
-        arrows: true,
         infinite: true,
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 1,
         variableWidth: true,
-        autoplay: true
+        autoplay: true,
+        // prevArrow: true,
+        // nextArrow: true,
+        arrows: true
     });
 
     //portfolio tab

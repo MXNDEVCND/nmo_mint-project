@@ -26,6 +26,10 @@
         &__anchor {
             @include vw-font-size-pc(18);
             font-family: $roboto;
+
+            &--active {
+                font-weight: bold;
+            }
         }
     }
 }

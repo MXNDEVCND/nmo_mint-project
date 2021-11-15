@@ -28,6 +28,12 @@
             }
         }
 
+        &--noline {
+            &:before {
+                display: none;
+            }
+        }
+
 
         &__title {
             @include vw-font-size-pc(46);

@@ -13,6 +13,7 @@ $gray555 : #555;
 $grayFa : #FAFAFF;
 $gray70 : #707070;
 
+$lightBlue :#F5F8FA;
 $blue : #0421FE;
 $navy : #252F46;
 
@@ -21,6 +22,9 @@ $navy : #252F46;
 }
 
 .mt {
+    &-22 {
+        margin-top: 22px !important;
+    }
     &-30 {
         margin-top: 30px !important;
     }
